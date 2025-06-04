@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <title>CSBS Department - PESCE Mandya</title>
+  <script>
+    function showalert() {
+      alert("Form submitted successfully!");
+    }
+  </script>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #272727;
-      color: #747474;
+      background-color: #111111;
+      color: #fffbfb;
       margin: 0;
       padding:0;
       padding-left: 200px;
       padding-top: 120px;
-
-         }
+    }
   
     header {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100px;
+        height: 80px;
         z-index: 1000;
       background-color: #1f1f1f;
       color: #FFE400;
@@ -28,40 +32,43 @@
       text-align: center;
       font-size: 32px;
       letter-spacing: 1.5px;
-           }
-       #H1 {
-        font-size: 20px;
+      }
+      #H1 {
+
+        margin-left: 500px; /* pushes it to the right */
+        text-align: left;
+        font-size: 17px;
         color: #66FCF1;
-           }
-      #logo-section {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        padding: 20px;
-        background-color: #1F2833;
-        border-bottom: 2px solid #45A29E;
-            }
+        }
+        #logo-section {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding: 20px;
+          background-color: #1F2833;
+          border-bottom: 2px solid #45A29E;
+        }
 
         .dept-logo {
         width: 100px;
         height: 100px;
         object-fit: contain;
         border-radius: 8px;
-        }
+      }
 
         #logo-section h1 {
         color: #66FCF1;
         font-size: 22px;
         font-weight: 600;
-        }
+      }
 
 nav {
   position: fixed;
-  top: 145px; /* Start below the header */
+  top: 130px; /* Start below the header */
   left: 0;
   height: calc(100vh - 145px); /* Adjust height to fit below header */
   width: 200px;
-  background-color: #1F2833;
+  background-color: #162536;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -92,7 +99,7 @@ nav a:hover {
     nav a {
       margin: 0 20px;
       text-decoration: none;
-      color: #14A76C;
+      color: #0ddb89;
       font-weight: bold;
       font-size: 18px;
       transition: color 0.3s ease, transform 0.2s ease;
@@ -123,7 +130,7 @@ nav a:hover {
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
-      color: #747474;
+      color: #fffefe;
     }
   
     th {
@@ -168,7 +175,7 @@ nav a:hover {
   
     footer {
       background-color: #1f1f1f;
-      color: #747474;
+      color: #fffefe;
       text-align: center;
       padding: 20px;
       font-size: 14px;
@@ -177,7 +184,7 @@ nav a:hover {
     #subjects {
   background-color: #212020;
   padding: 30px;
-  color: #747474;
+  color: #ffffff;
 }
 
 #subjects h2 {
@@ -206,8 +213,40 @@ nav a:hover {
 .semester li {
   margin-bottom: 8px;
 }
-    
-  </style>
+
+/* Added for achievements section */
+.achievement-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #121212;
+  border-left: 5px solid #66FCF1;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(102, 252, 241, 0.1);
+}
+
+.achievement-item h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #66FCF1;
+}
+
+.achievement-item p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.achievement-item a {
+  color: #FF652F;
+  text-decoration: underline;
+}
+
+.achievement-item a:hover {
+  color: #FFE400;
+}
+
+
+</style>
   
   
 </head>
@@ -340,11 +379,59 @@ nav a:hover {
     <!-- Event details can be dynamically updated -->
   </section>
 
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <p>Information about the department's achievements will be showcased here.</p>
-    <!-- Achievement details can be dynamically updated -->
-  </section>
+<section id="achievements">
+  <h2>Achievements</h2>
+
+  <div class="achievement-item">
+    <h3>TechFest 2024 - Coding Competition</h3>
+    <p><strong>Date:</strong> 2024-03-15</p>
+    <p><strong>Winners:</strong> Ravi Kumar, Priya Sharma, Arun M</p>
+    <p><a href="https://drive.google.com/drive/folders/1example1" target="_blank">View Photos</a></p>
+  </div>
+
+  <div class="achievement-item">
+    <h3>Smart India Hackathon Regional Finals</h3>
+    <p><strong>Date:</strong> 2024-02-28</p>
+    <p><strong>Winners:</strong> Team Alpha: Suresh, Kavya, Mohan | Team Beta: Deepa, Raj, Sita</p>
+    <p><a href="https://drive.google.com/drive/folders/1example2" target="_blank">View Photos</a></p>
+  </div>
+
+  <div class="achievement-item">
+    <h3>CSBS Department Logo Design Contest</h3>
+    <p><strong>Date:</strong> 2024-12-16</p>
+    <p><strong>Winner:</strong> Puneet Singh</p>
+    <p><a href="https://drive.google.com/drive/folders/1example3" target="_blank">View Photos</a></p>
+  </div>
+
+  <div class="achievement-item">
+    <h3>Slide Showdown Presentation Contest</h3>
+    <p><strong>Date:</strong> 2024-12-16</p>
+    <p><strong>Winners:</strong> Puneet Singh, Krishna Raj Kurup, Bharath N, Mallya S Murthy</p>
+    <p><a href="https://drive.google.com/drive/folders/1example4" target="_blank">View Photos</a></p>
+  </div>
+
+  <div class="achievement-item">
+    <h3>Colossus 2.0</h3>
+    <p><strong>Date:</strong> 2025-04-11</p>
+    <p><strong>Winners:</strong> Alok Singh, Shivam Verma, Saurabh Kumar Patel, Shubham Malhotra</p>
+    <p><a href="https://drive.google.com/drive/folders/1example4" target="_blank">View Photos</a></p>
+  </div>
+
+  <div class="achievement-item">
+    <h3>Innovate-A-Thon</h3>
+    <p><strong>Date:</strong> 2024-10-29</p>
+    <p><strong>Winners:</strong> Alok Singh, Shivam Verma, Saurabh Kumar Patel, Shubham Malhotra</p>
+    <p><a href="https://drive.google.com/drive/folders/1example4" target="_blank">View Photos</a></p>
+  </div>
+
+  <div class="achievement-item">
+    <h3>Builverse Hackathon 2025</h3>
+    <p><strong>Date:</strong> 2025-06-25</p>
+    <p><strong>Winner:</strong> Puneet Singh</p>
+    <p><a href="https://drive.google.com/drive/folders/1example5" target="_blank">View Photos</a></p>
+  </div>
+</section>
+
   
   <section id="contact">
     <h2>Contact Us</h2>
@@ -358,7 +445,7 @@ nav a:hover {
       <label for="message">Message:</label><br>
       <textarea id="message" name="message" rows="5" required></textarea><br><br>
   
-      <button type="submit">Submit</button>
+      <button type="submit" onclick="showalert()">Submit</button>
     </form>
   </section>
   <footer>
